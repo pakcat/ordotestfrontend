@@ -42,7 +42,7 @@ class HomePage extends GetView<HomeController> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: EdgeInsets.only(left: 2.w),
+                padding: EdgeInsets.only(left: 1.5.w),
                 child: Container(
                   width: 58.w,
                   child: Search(),
@@ -60,7 +60,7 @@ class HomePage extends GetView<HomeController> {
                 flex: 2,
               ),
               Padding(
-                padding: EdgeInsets.only(right: 2.w),
+                padding: EdgeInsets.only(right: 1.5.w),
                 child: ButtonHomePage(
                     4.sp, "#FF485A", "assets/icons/top3.png", 14.sp),
               )
@@ -93,9 +93,9 @@ class HomePage extends GetView<HomeController> {
                     List<Widget>.generate(imagescarousel.length, (int index) {
                   return Obx(() => AnimatedContainer(
                       duration: Duration(milliseconds: 300),
-                      height: 5.sp,
+                      height: 4.sp,
                       width: (index == homeC.currentpage.value) ? 15.sp : 20.sp,
-                      margin: EdgeInsets.symmetric(horizontal: 2),
+                      margin: EdgeInsets.symmetric(horizontal: 1.3.sp),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5),
                           color: (index == homeC.currentpage.value)

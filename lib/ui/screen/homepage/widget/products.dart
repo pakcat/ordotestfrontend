@@ -30,7 +30,7 @@ class ProductItem extends StatelessWidget {
               ),
         ], color: Colors.white, borderRadius: BorderRadius.circular(12.sp)),
         child: Padding(
-          padding: EdgeInsets.all(8.sp),
+          padding: EdgeInsets.all(6.sp),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -109,12 +109,12 @@ class ProductItem extends StatelessWidget {
                             decoration: TextDecoration.lineThrough)),
                     Container(
                         padding: EdgeInsets.symmetric(
-                            vertical: 2.sp, horizontal: 7.sp),
+                            vertical: 2.sp, horizontal: 5.5.sp),
                         decoration: ShapeDecoration(
                             shape: StadiumBorder(), color: HexColor('#3C7DD9')),
                         child: Text(
                           "Diskon 1 0%",
-                          style: TextStyle(
+                          style: GoogleFonts.poppins(
                               color: Colors.white,
                               fontSize: 5.sp,
                               fontWeight: FontWeight.w700),
@@ -131,7 +131,8 @@ class ProductItem extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 0.5.h),
                 child: Text(
                   "Lorem Ipsum",
-                  style: TextStyle(fontSize: 8.sp, fontWeight: FontWeight.w600),
+                  style: GoogleFonts.poppins(
+                      fontSize: 8.sp, fontWeight: FontWeight.w600),
                 ),
               )
             ],

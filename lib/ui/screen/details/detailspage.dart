@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:ordomobile/controller/details/detailsC.dart';
 import 'package:ordomobile/routes/app_routes.dart';
@@ -64,7 +65,7 @@ class DetailsPage extends GetView<DetailsController> {
                       ),
                       Text(
                         'PRODUK DETAIL',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                             color: HexColor("#64A1F4"),
                             fontSize: 10.sp,
                             fontWeight: FontWeight.w700),
@@ -131,11 +132,11 @@ class DetailsPage extends GetView<DetailsController> {
                   children: List<Widget>.generate(3, (int index) {
                     return Obx(() => AnimatedContainer(
                         duration: Duration(milliseconds: 300),
-                        height: 5.sp,
+                        height: 4.sp,
                         width: (index == DetailC.currentpage.value)
                             ? 15.sp
                             : 20.sp,
-                        margin: EdgeInsets.symmetric(horizontal: 2),
+                        margin: EdgeInsets.symmetric(horizontal: 1.3.sp),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(5),
                             color: (index == DetailC.currentpage.value)
@@ -158,8 +159,8 @@ class DetailsPage extends GetView<DetailsController> {
                   Padding(
                     padding: EdgeInsets.only(top: 2.4.h),
                     child: Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 4.h, horizontal: 6.w),
+                      padding: EdgeInsets.symmetric(
+                          vertical: 18.sp, horizontal: 7.w),
                       width: 100.w,
                       decoration: BoxDecoration(
                           color: Colors.white,
@@ -173,9 +174,9 @@ class DetailsPage extends GetView<DetailsController> {
                             children: [
                               Text(
                                 "Tas Gucci",
-                                style: TextStyle(
+                                style: GoogleFonts.poppins(
                                     color: HexColor("#47623F"),
-                                    fontSize: 12.sp,
+                                    fontSize: 12.2.sp,
                                     fontWeight: FontWeight.w700),
                               ),
                               Row(
@@ -209,7 +210,7 @@ class DetailsPage extends GetView<DetailsController> {
                                     ),
                                     Text(
                                       "Rp 100.500",
-                                      style: TextStyle(
+                                      style: GoogleFonts.poppins(
                                           color: HexColor("#3C7DD9"),
                                           fontWeight: FontWeight.w700,
                                           fontSize: 11.6.sp),
@@ -218,7 +219,7 @@ class DetailsPage extends GetView<DetailsController> {
                                 ),
                                 Container(
                                     padding: EdgeInsets.symmetric(
-                                        horizontal: 6.sp, vertical: 0.5.sp),
+                                        horizontal: 7.sp, vertical: 1.sp),
                                     decoration: ShapeDecoration(
                                         shape: StadiumBorder(),
                                         color: HexColor("#3C7DD9")),
@@ -262,7 +263,7 @@ class DetailsPage extends GetView<DetailsController> {
                                     ),
                                     Text(
                                       "Eiger Store",
-                                      style: TextStyle(
+                                      style: GoogleFonts.poppins(
                                           fontWeight: FontWeight.w700,
                                           fontSize: 9.5.sp),
                                     )
@@ -347,7 +348,7 @@ class DetailsPage extends GetView<DetailsController> {
 
   Container label(String text, String color) {
     return Container(
-        padding: EdgeInsets.symmetric(horizontal: 6.sp, vertical: 3.sp),
+        padding: EdgeInsets.symmetric(horizontal: 8.sp, vertical: 4.sp),
         decoration:
             ShapeDecoration(shape: StadiumBorder(), color: HexColor(color)),
         child: Text(

@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:ordomobile/routes/app_pages.dart';
 import 'package:ordomobile/routes/app_routes.dart';
@@ -8,6 +10,11 @@ import 'package:ordomobile/ui/utils/botnavpages.dart';
 import 'package:sizer/sizer.dart';
 
 void main() {
+  LicenseRegistry.addLicense(() async* {
+    final license = await rootBundle.loadString('assets/fonts/OFL.txt');
+    yield LicenseEntryWithLineBreaks(['google_fonts'], license);
+  });
+
   runApp(MyApp());
 }
 
